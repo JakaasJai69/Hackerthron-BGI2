@@ -12,20 +12,32 @@ import CulturalMap from './components/CulturalMap';
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/museum" element={<Museum />} />
-            <Route path="/heritage-guide" element={<HeritageGuide />} />
-            <Route path="/quiz-game" element={<QuizGame />} />
-            <Route path="/language-learning" element={<LanguageLearning />} />
-            <Route path="/cultural-map" element={<CulturalMap />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+    <div className="app-container"
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        backgroundImage: 'url(/assets/images/futuristic-background-placeholder.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        color: '#00fff7',
+        fontFamily: "'Orbitron', monospace",
+      }}
+    >
+      {/* Removed fixed div with clipPath polygon to eliminate corner piece */}
+      <Header />
+      <main style={{ position: 'relative', zIndex: 2 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/museum" element={<Museum />} />
+          <Route path="/heritage-guide" element={<HeritageGuide />} />
+          <Route path="/quiz-game" element={<QuizGame />} />
+          <Route path="/language-learning" element={<LanguageLearning />} />
+          <Route path="/cultural-map" element={<CulturalMap />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
     </Router>
   );
 }

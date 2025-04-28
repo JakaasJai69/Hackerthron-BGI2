@@ -11,7 +11,7 @@ const CulturalMap = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
 
   return (
-    <div style={{ backgroundColor: '#0a0a23', minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace" }}>
+    <div style={{ minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace" }}>
       <h1 style={{ textAlign: 'center', marginBottom: '1rem', textShadow: '0 0 15px #00fff7' }}>Interactive Cultural Map of India</h1>
       <p style={{ textAlign: 'center', marginBottom: '2rem', textShadow: '0 0 8px #00fff7' }}>Click on a region to learn more.</p>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '900px', margin: 'auto' }}>

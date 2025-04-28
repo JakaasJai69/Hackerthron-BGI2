@@ -60,7 +60,7 @@ const LanguageLearning = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#0a0a23', minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace", maxWidth: '900px', margin: '0 auto' }} >
       <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '2.5rem', textShadow: '0 0 15px #00fff7' }}>Discover India's Cultural Heritage Through Language!</h1>
         <p style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '1rem auto', textShadow: '0 0 8px #00fff7' }}>
@@ -69,7 +69,7 @@ const LanguageLearning = () => {
       </header>
 
       {!selectedLanguage ? (
-        <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', maxWidth: '900px' }}>
+        <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', maxWidth: '900px', }}>
           {languages.map((lang) => (
             <button
               key={lang.id}
@@ -96,7 +96,7 @@ const LanguageLearning = () => {
           ))}
         </section>
       ) : (
-        <section style={{ maxWidth: '700px', marginTop: '1rem', textAlign: 'center' }}>
+        <section style={{ maxWidth: '700px', marginTop: '1rem', textAlign: 'center', margin: '0 auto' }}>
           <button
             onClick={() => setSelectedLanguage(null)}
             style={{
@@ -151,16 +151,6 @@ const LanguageLearning = () => {
           </div>
         </section>
       )}
-
-      <footer style={{ marginTop: 'auto', padding: '1rem', textAlign: 'center', borderTop: '1px solid #00fff7', width: '100%', boxShadow: '0 0 10px #00fff7' }}>
-        <p>Explore more lessons:</p>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-          <a href="/quiz-game" style={{ color: '#00fff7', textDecoration: 'none', fontWeight: '700', textShadow: '0 0 5px #00fff7' }}>Quiz Game</a>
-          <a href="/heritage-guide" style={{ color: '#00fff7', textDecoration: 'none', fontWeight: '700', textShadow: '0 0 5px #00fff7' }}>AI Heritage Guide</a>
-          <a href="/cultural-map" style={{ color: '#00fff7', textDecoration: 'none', fontWeight: '700', textShadow: '0 0 5px #00fff7' }}>Cultural Map</a>
-        </div>
-        <p style={{ marginTop: '1rem' }}>Keep learning and preserving India's rich cultural heritage!</p>
-      </footer>
     </div>
   );
 };

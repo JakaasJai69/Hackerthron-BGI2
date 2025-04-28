@@ -12,7 +12,7 @@ const HeritageGuide = () => {
   const [messages] = useState(dummyMessages);
 
   return (
-    <div style={{ backgroundColor: '#0a0a23', minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace" }}>
+    <div style={{ minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace" }}>
       <h1 style={{ textAlign: 'center', textShadow: '0 0 10px #00fff7' }}>AI Heritage Guide (Simulated)</h1>
       <div style={{
         border: '2px solid #00fff7',

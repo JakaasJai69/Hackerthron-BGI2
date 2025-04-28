@@ -41,7 +41,6 @@ const Home = () => {
     <div
       style={{
         minHeight: '100vh',
-        backgroundImage: 'url(/assets/images/futuristic-background-placeholder.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
