@@ -23,7 +23,7 @@ a:hover {
   background-color: #011f27;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* changed from space-between to center */
   align-items: center;
   box-shadow: 0 0 15px #00fff7;
   border-bottom: 1px solid #00fff7;
@@ -38,6 +38,7 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center; /* added to center nav links */
 }
 
 .app-header nav a {

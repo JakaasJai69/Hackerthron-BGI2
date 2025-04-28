@@ -53,23 +53,28 @@ const Home = () => {
       }}
     >
       <img
-  src="/assets/images/futuristic-logo-placeholder.jpg"
-  alt="Swarn Sanskriti Logo"
-  style={{
-    width: '250px',
-    height: '250px',
-    marginBottom: '2rem',
-    border: '4px solid #00fff7',
-    borderRadius: '50%',
-    filter: 'drop-shadow(0 0 15px #00fff7)',
-    objectFit: 'cover',
-  }}
-/>
+        src="/assets/images/futuristic-logo-placeholder.jpg"
+        alt="Swarn Sanskriti Logo"
+        style={{
+          width: '250px',
+          height: '250px',
+          marginBottom: '2rem',
+          border: '4px solid #00fff7',
+          borderRadius: '50%',
+          filter: 'drop-shadow(0 0 15px #00fff7)',
+          objectFit: 'cover',
+        }}
+      />
 
-      <h1 style={{ textShadow: '0 0 15px #00fff7', marginBottom: '2rem' }}>
+      <h1 style={{ textShadow: '0 0 15px #00fff7', marginBottom: '1rem' }}>
         Welcome to Swarn Sanskriti
       </h1>
-      <div style={{ maxWidth: '1000px', width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
+
+      <p style={{ maxWidth: '700px', textAlign: 'center', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.5', color: '#00fff7', textShadow: '0 0 8px #000' }}>
+        Swarn Sanskriti is your gateway to exploring the rich cultural heritage of India through immersive digital experiences, AI-guided learning, and interactive games.
+      </p>
+
+      <div style={{ maxWidth: '1000px', width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', marginBottom: '3rem' }}>
         {features.map((feature) => (
           <div
             key={feature.title}
@@ -78,21 +83,15 @@ const Home = () => {
             tabIndex={0}
             onKeyPress={() => navigate(feature.link)}
             style={{
-              backgroundImage: `url(${feature.img})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
               width: '220px',
-              minHeight: '260px',
               borderRadius: '12px',
               boxShadow: '0 0 15px #00fff7',
               cursor: 'pointer',
               color: '#00fff7',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'flex-end',
-              padding: '1rem',
-              textShadow: '0 0 8px #000',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              backgroundColor: 'rgba(0, 0, 0, 0.6)',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'scale(1.05)';
@@ -103,12 +102,40 @@ const Home = () => {
               e.currentTarget.style.boxShadow = '0 0 15px #00fff7';
             }}
           >
-            <h3 style={{ margin: 0 }}>{feature.title}</h3>
-            <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', backgroundColor: 'rgba(0,0,0,0.5)', borderRadius: '6px', padding: '0.25rem' }}>
-              {feature.description}
-            </p>
+            <img
+              src={feature.img}
+              alt={feature.title}
+              style={{
+                width: '100%',
+                height: '160px',
+                borderTopLeftRadius: '12px',
+                borderTopRightRadius: '12px',
+                objectFit: 'cover',
+              }}
+            />
+            <div style={{ padding: '1rem' }}>
+              <h3 style={{ margin: 0 }}>{feature.title}</h3>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
+      </div>
+
+      <div style={{ maxWidth: '1000px', width: '100%', color: '#00fff7', textAlign: 'center', fontFamily: "'Orbitron', monospace" }}>
+        <div style={{ marginBottom: '2rem' }}>
+          <h2>Explore India's Cultural Heritage</h2>
+          <p>Delve into the diverse traditions, languages, and history that make India unique. Our platform offers a variety of interactive tools to enrich your understanding.</p>
+        </div>
+        <div style={{ marginBottom: '2rem' }}>
+          <h2>Interactive Learning Experiences</h2>
+          <p>Engage with AI guides, quizzes, and games designed to make learning about culture fun and immersive for all ages.</p>
+        </div>
+        <div style={{ marginBottom: '2rem' }}>
+          <h2>Community and Collaboration</h2>
+          <p>Join a vibrant community passionate about preserving and sharing cultural knowledge. Collaborate, share stories, and contribute to our growing digital heritage.</p>
+        </div>
       </div>
     </div>
   );
