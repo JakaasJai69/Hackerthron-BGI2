@@ -33,8 +33,8 @@ function App() {
           paddingTop: '60px', // padding inside blur area for header space
           paddingBottom: '60px', // padding inside blur area for footer space
           backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
+          backdropFilter: 'blur(3px)',  // increased blur from 8px to 10px
+          WebkitBackdropFilter: 'blur(10px)',  // increased blur from 8px to 10px
           borderRadius: '12px',
           position: 'relative',
           zIndex: 1,
