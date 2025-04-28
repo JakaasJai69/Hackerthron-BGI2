@@ -12,19 +12,30 @@ const HeritageGuide = () => {
   const [messages] = useState(dummyMessages);
 
   return (
-    <div>
-      <h1>AI Heritage Guide (Simulated)</h1>
-      <div style={{ border: '1px solid #d9cbb6', padding: '1rem', borderRadius: '8px', maxWidth: '600px', margin: 'auto', backgroundColor: '#fff8f0' }}>
+    <div style={{ backgroundColor: '#0a0a23', minHeight: '100vh', padding: '2rem', color: '#00fff7', fontFamily: "'Orbitron', monospace" }}>
+      <h1 style={{ textAlign: 'center', textShadow: '0 0 10px #00fff7' }}>AI Heritage Guide (Simulated)</h1>
+      <div style={{
+        border: '2px solid #00fff7',
+        padding: '1rem',
+        borderRadius: '12px',
+        maxWidth: '600px',
+        margin: '2rem auto',
+        backgroundColor: '#121233',
+        boxShadow: '0 0 20px #00fff7',
+      }}>
         {messages.map((msg) => (
           <div key={msg.id} style={{ marginBottom: '1rem', textAlign: msg.sender === 'bot' ? 'left' : 'right' }}>
             <div style={{
               display: 'inline-block',
               padding: '0.5rem 1rem',
               borderRadius: '15px',
-              backgroundColor: msg.sender === 'bot' ? '#d9cbb6' : '#a67c52',
-              color: msg.sender === 'bot' ? '#4b3b2b' : '#fff',
+              backgroundColor: msg.sender === 'bot' ? '#002b36' : '#ff007f',
+              color: msg.sender === 'bot' ? '#00fff7' : '#fff',
               maxWidth: '80%',
               wordWrap: 'break-word',
+              boxShadow: msg.sender === 'bot' ? '0 0 10px #00fff7' : '0 0 10px #ff007f',
+              fontWeight: '600',
+              fontSize: '1rem',
             }}>
               {msg.text}
             </div>

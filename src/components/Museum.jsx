@@ -26,12 +26,28 @@ const Museum = () => {
     <div>
       <h1>Digital Museum</h1>
       <p>Explore the rich cultural artifacts of India.</p>
-      <div className="home-cards">
+      <div className="home-cards" style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
         {artifacts.map((artifact) => (
-          <div key={artifact.id} className="card">
-            <img src={artifact.img} alt={artifact.name} />
-            <h3>{artifact.name}</h3>
-            <p>{artifact.description}</p>
+          <div
+            key={artifact.id}
+            className="card"
+            style={{
+              width: '280px',
+              height: '400px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              padding: '1rem',
+              boxSizing: 'border-box',
+            }}
+          >
+            <img
+              src={artifact.img}
+              alt={artifact.name}
+              style={{ width: '100%', height: '70%', objectFit: 'cover', borderRadius: '8px' }}
+            />
+            <h3 style={{ marginTop: '1rem', marginBottom: '0.5rem' }}>{artifact.name}</h3>
+            <p style={{ margin: 0 }}>{artifact.description}</p>
           </div>
         ))}
       </div>
