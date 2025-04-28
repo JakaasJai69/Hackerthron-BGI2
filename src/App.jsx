@@ -24,18 +24,34 @@ function App() {
         fontFamily: "'Orbitron', monospace",
       }}
     >
-      {/* Removed fixed div with clipPath polygon to eliminate corner piece */}
+      {/* Removed absolute positioned blur layer */}
       <Header />
-      <main style={{ position: 'relative', zIndex: 2 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/museum" element={<Museum />} />
-          <Route path="/heritage-guide" element={<HeritageGuide />} />
-          <Route path="/quiz-game" element={<QuizGame />} />
-          <Route path="/language-learning" element={<LanguageLearning />} />
-          <Route path="/cultural-map" element={<CulturalMap />} />
-        </Routes>
-      </main>
+      <div
+        style={{
+          paddingLeft: '20px',
+          paddingRight: '20px',
+          paddingTop: '60px', // padding inside blur area for header space
+          paddingBottom: '60px', // padding inside blur area for footer space
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          borderRadius: '12px',
+          position: 'relative',
+          zIndex: 1,
+          boxSizing: 'border-box',
+        }}
+      >
+        <main style={{ position: 'relative', zIndex: 2, width: '95%', marginLeft: 'auto', marginRight: 'auto', padding: 0 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/museum" element={<Museum />} />
+            <Route path="/heritage-guide" element={<HeritageGuide />} />
+            <Route path="/quiz-game" element={<QuizGame />} />
+            <Route path="/language-learning" element={<LanguageLearning />} />
+            <Route path="/cultural-map" element={<CulturalMap />} />
+          </Routes>
+        </main>
+      </div>
       <Footer />
     </div>
     </Router>

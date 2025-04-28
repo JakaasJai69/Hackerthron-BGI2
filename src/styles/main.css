@@ -19,7 +19,7 @@ a:hover {
 }
 
 /* Header Styles */
-header {
+.app-header {
   background-color: #011f27;
   padding: 1rem 2rem;
   display: flex;
@@ -27,10 +27,23 @@ header {
   align-items: center;
   box-shadow: 0 0 15px #00fff7;
   border-bottom: 1px solid #00fff7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
 }
 
-nav a {
-  margin: 0 1rem;
+.app-header nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.app-header nav a {
+  font-size: 1.1rem;
+  white-space: nowrap;
+  margin: 0 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -49,7 +62,7 @@ footer {
   width: 100%;
   bottom: 0;
   box-shadow: 0 0 10px #00fff7;
-  z-index: 10; /* Added to ensure footer is above main content */
+  z-index: 10; /* Ensure footer is above main content */
 }
 
 /* Main Content */
@@ -133,7 +146,7 @@ p {
     width: 90%;
   }
 
-  header, footer {
+  .app-header, footer {
     padding: 1rem;
   }
 }

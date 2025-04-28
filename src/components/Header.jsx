@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
+    <header className="app-header">
       <nav>
         <NavLink to="/" end style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>Home</NavLink>
         <NavLink to="/museum" style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })}>Digital Museum</NavLink>
